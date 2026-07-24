@@ -63,7 +63,7 @@ a{color:inherit;text-decoration:none}
 
 /* ===== HERO ===== */
 .hero{position:relative;overflow:hidden;padding-top:64px}
-.hero__inner{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;padding-bottom:56px}
+.hero__inner{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:start;padding-bottom:56px}
 .pill{
   display:inline-flex;align-items:center;gap:8px;padding:8px 16px;border-radius:100px;
   background:var(--bg-soft);border:1px solid var(--line);font-weight:700;font-size:13px;color:var(--ink-soft);
@@ -78,7 +78,7 @@ a{color:inherit;text-decoration:none}
 
 .hero__photo{display:flex;justify-content:center}
 .photo-card{
-  position:relative;width:100%;max-width:380px;border-radius:28px;overflow:hidden;
+  position:relative;width:100%;max-width:330px;border-radius:28px;overflow:hidden;
   background:linear-gradient(160deg,#eef1f7,#dfe4ee);box-shadow:var(--shadow);
   border:1px solid var(--line);
 }

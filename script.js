@@ -159,12 +159,17 @@ const projects = [
     slug: "bronicot",
     title: "Броникот",
     label: "Hospitality / Mobile + Web",
-    period: "7 месяцев",
+    period: "7 месяцев · App Store · Google Play · RuStore",
     theme: { primary: "#671C2D", accent: "#07BD74", surface: "#F3E9EB" },
     subtitle: "Экосистема ресторанного бронирования с рейтингом заведений и интерактивной картой зала.",
     summary: "Платформа для гостей и ресторанов: поиск, рейтинг, смарт-бронирование, управление загрузкой и онлайн-планом зала.",
     client: "Сеть ресторанных партнёров",
     cover: "assets/projects/bronicot/hero-card.png",
+    links: [
+      { label: "App Store", type: "appstore", url: "https://apps.apple.com/us/app/%D0%B1%D1%80%D0%BE%D0%BD%D0%B8%D0%BA%D0%BE%D1%82/id6762212866" },
+      { label: "Google Play", type: "googleplay", url: "https://play.google.com/store/apps/details?id=com.mycompany.bronecatbook" },
+      { label: "RuStore", type: "rustore", url: "https://www.rustore.ru/catalog/app/com.mycompany.bronicatbook" },
+    ],
     challenge: [
       "Гостям сложно выбирать место в зале без наглядной схемы.",
       "У ресторанов были разрозненные каналы бронирования и высокий no-show.",
@@ -364,11 +369,13 @@ const timeline = [
     ],
   },
   {
-    period: "Октябрь 2023 — Февраль 2024",
-    place: "Deveducation",
-    title: "Intern Frontend Developer",
+    period: "2021 — 2023",
+    place: "EPAM · Upwork",
+    title: "Frontend Developer — обучение, стажировка и фриланс",
     points: [
-      "Разработал три веб-приложения на React, Redux, Bootstrap и Firebase в рамках стажировки.",
+      "Прошёл обучение и стажировку в EPAM: React, JavaScript (ES6+), вёрстка и работа в команде по Agile.",
+      "Брал первые коммерческие заказы на фрилансе через Upwork — лендинги и веб-приложения на React.",
+      "Заложил фундамент фронтенд-стека и инженерных практик: Git, код-ревью, работа с REST API.",
     ],
   },
 ];
