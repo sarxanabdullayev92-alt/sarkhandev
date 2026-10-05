@@ -177,6 +177,7 @@ const projects = [
     links: [
       { label: "RuStore", type: "rustore", url: "https://www.rustore.ru/catalog/app/com.mycompany.backloadapp" },
       { label: "Google Play", type: "googleplay", url: "https://play.google.com/store/apps/details?id=com.mycompany.backloadapp" },
+      { label: "App Store", type: "appstore", url: "https://apps.apple.com/az/app/%D0%BF%D0%BE%D0%BF%D1%83%D1%82%D0%BD%D1%8B%D0%B9-%D0%B3%D1%80%D1%83%D0%B7/id6809916685?l=ru" },
     ],
     challenge: [
       "Заказчики и перевозчики не имели единого места для попутных перевозок в одном направлении.",
@@ -202,6 +203,42 @@ const projects = [
       { src: "assets/projects/backload/screen1.png", caption: "Поиск заказов: список заявок с маршрутом и ценой.", fit: "contain" },
       { src: "assets/projects/backload/screen2.png", caption: "Управление заявкой: исполнитель, маршрут, габариты.", fit: "contain" },
       { src: "assets/projects/backload/screen3.png", caption: "Профиль перевозчика: рейтинг и отзывы.", fit: "contain" },
+    ],
+  },
+  {
+    slug: "vvpl",
+    title: "ВВПЛ",
+    label: "Logistics / Driver App",
+    period: "2026 · RuStore",
+    theme: { primary: "#075B4A", accent: "#E5A33B", surface: "#EAF3EF" },
+    subtitle: "Рабочее приложение для водителей: заказы со склада, маршруты и доставка по пунктам выдачи.",
+    summary: "ВВПЛ помогает водителям логистической компании забрать заказы со склада и развезти их по пунктам выдачи без звонков, чатов и таблиц. В приложении собраны маршруты и статусы, карта с точками, календарь смен и уведомления о выездах и сборке.",
+    client: "ВВПЛ",
+    cover: "assets/projects/vvpl/screen1.webp",
+    coverFit: "cover",
+    links: [
+      { label: "RuStore", type: "rustore", url: "https://www.rustore.ru/catalog/app/com.wb.mobile" },
+    ],
+    challenge: [
+      "Водителям нужно было выполнять доставку, не переключаясь между звонками, чатами и таблицами.",
+      "Маршруты, статусы заказов, точки выдачи и расписание смен важно видеть в одном рабочем приложении.",
+    ],
+    solution: [
+      "Собрали маршруты и статусы заказов в одном списке и показали склад, точки выдачи и путь на карте.",
+      "Добавили календарь смен и push-уведомления о выездах и сборке заказов.",
+    ],
+    stats: [
+      { value: "Склад → ПВЗ", label: "Маршрут доставки" },
+      { value: "Карта", label: "Склады и точки выдачи" },
+      { value: "Календарь", label: "Планирование смен" },
+      { value: "Push", label: "Уведомления о работе" },
+    ],
+    galleryTitle: "Экраны приложения",
+    gallery: [
+      { src: "assets/projects/vvpl/screen1.webp", caption: "Маршруты, статусы заказов и показатели водителя.", fit: "contain" },
+      { src: "assets/projects/vvpl/screen2.webp", caption: "Маршрут на карте со складом и точками выдачи.", fit: "contain" },
+      { src: "assets/projects/vvpl/screen3.webp", caption: "Календарь смен и назначенные маршруты.", fit: "contain" },
+      { src: "assets/projects/vvpl/screen4.webp", caption: "Уведомления о сборке заказов и выездах.", fit: "contain" },
     ],
   },
   {
@@ -555,8 +592,7 @@ function openModal(i) {
     <div class="m-stats">
       ${p.stats.map((s) => `<div class="m-stat"><b style="color:${p.theme.primary}">${s.value}</b><span>${s.label}</span></div>`).join("")}
     </div>
-    <h4 class="m-h4">Стек</h4>
-    <div class="m-stack">${p.stack.map((t) => `<span class="chip">${t}</span>`).join("")}</div>
+    ${p.stack?.length ? `<h4 class="m-h4">Стек</h4><div class="m-stack">${p.stack.map((t) => `<span class="chip">${t}</span>`).join("")}</div>` : ""}
     <h4 class="m-h4">${p.galleryTitle || "Экраны"}</h4>
     <div class="m-gallery">
       ${p.gallery.map((g) => `<figure class="${g.fit === "contain" ? "fig--contain" : ""}"><img src="${g.src}" alt="${g.caption}" loading="lazy"><figcaption>${g.caption}</figcaption></figure>`).join("")}
