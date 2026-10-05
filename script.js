@@ -322,6 +322,7 @@ const projects = [
     cover: "assets/projects/bum-messenger/hero-card.png",
     links: [
       { label: "RuStore", type: "rustore", url: "https://www.rustore.ru/catalog/app/com.boom.app" },
+      { label: "App Store", type: "appstore", url: "https://apps.apple.com/us/app/bume/id6758313530" },
     ],
     challenge: [
       "Требовалось реализовать защищённый обмен сообщениями с минимальной задержкой.",
